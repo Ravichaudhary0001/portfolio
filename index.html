@@ -2,71 +2,28 @@
 <html>
 
 <head>
-<title>My Portfolio</title>
-
-<style>
-body{
-font-family: Arial;
-background:#0f172a;
-color:white;
-text-align:center;
-}
-
-.project{
-background:#1e293b;
-margin:20px;
-padding:20px;
-border-radius:10px;
-}
-
-button{
-padding:10px;
-background:#22c55e;
-border:none;
-color:white;
-cursor:pointer;
-}
-</style>
+    <title>Digital Clock</title>
 
 </head>
 
 <body>
+    <h1>Digital Clock</h1>
+    
+    <h2 id="clock"></h2>
 
-<h1>My Projects</h1>
+    <script>
 
-<!-- Todo App -->
-<div class="project">
-<h3>Todo App</h3>
-<p>A task management app where users can add and delete tasks.</p>
+         function showtime() {
 
-<a href="https://ravichaudhary0001.github.io/todo-app/" target="_blank">
-<button>View Project</button>
-</a>
+            let now = new Date();
 
-</div>
+            let time = now.toLocaleTimeString();
 
-<!-- Notes App -->
-<div class="project">
-<h3>Notes App</h3>
-<p>A notes application using localStorage to save notes.</p>
+            document.getElementById("clock").innerText = time;
+        }
 
-<a href="https://ravichaudhary0001.github.io/notes-app/" target="_blank">
-<button>View Project</button>
-</a>
+        setInterval(showtime, 1000);
 
-</div>
-
-<!-- Digital Clock -->
-<div class="project">
-<h3>Digital Clock</h3>
-<p>A digital clock built using JavaScript.</p>
-
-<a href="#" target="_blank">
-<button>View Project</button>
-</a>
-
-</div>
-
+    </script>
 </body>
-
 </html>
